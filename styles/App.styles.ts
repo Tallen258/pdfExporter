@@ -3,144 +3,169 @@ import { StyleSheet } from 'react-native';
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f5f5f5',
+    backgroundColor: '#F5E6D3', // tan background
   },
+
   header: {
-    backgroundColor: '#2563eb',
+    backgroundColor: '#1B4332', // forest green
     paddingTop: 50,
     paddingBottom: 30,
     paddingHorizontal: 20,
     alignItems: 'center',
   },
+
   title: {
     fontSize: 32,
     fontWeight: 'bold',
     color: '#fff',
     marginBottom: 5,
   },
+
   subtitle: {
     fontSize: 14,
-    color: '#e0e7ff',
+    color: '#DCC3A5', // soft tan accent
   },
+
   content: {
     padding: 20,
   },
+
   section: {
-    backgroundColor: '#fff',
-    borderRadius: 12,
-    padding: 16,
+    backgroundColor: '#EAD7C3', // soft tan card
+    borderRadius: 16,
+    padding: 18,
     marginBottom: 16,
     shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.1,
-    shadowRadius: 4,
-    elevation: 3,
+    shadowOffset: { width: 0, height: 3 },
+    shadowOpacity: 0.15,
+    shadowRadius: 6,
+    elevation: 4,
   },
+
   sectionTitle: {
     fontSize: 18,
     fontWeight: '600',
-    color: '#1f2937',
+    color: '#1B4332',
     marginBottom: 8,
   },
+
   description: {
     fontSize: 14,
-    color: '#6b7280',
+    color: '#5A5A5A',
     marginBottom: 16,
   },
+
   button: {
-    paddingVertical: 12,
+    paddingVertical: 14,
     paddingHorizontal: 20,
-    borderRadius: 8,
+    borderRadius: 12,
     alignItems: 'center',
     justifyContent: 'center',
-    minHeight: 48,
+    minHeight: 50,
   },
+
   generateButton: {
-    backgroundColor: '#10b981',
+    backgroundColor: '#1B4332',
   },
+
   shareButton: {
-    backgroundColor: '#f59e0b',
+    backgroundColor: '#1B4332',
   },
+
   driveButton: {
-    backgroundColor: '#4285f4',
+    backgroundColor: '#1B4332',
   },
+
   disabledButton: {
-    backgroundColor: '#d1d5db',
+    backgroundColor: '#C9B8A6',
   },
+
   buttonText: {
-    color: '#fff',
+    color: '#F5E6D3',
     fontSize: 16,
     fontWeight: '600',
+    letterSpacing: 0.5,
   },
+
   statusText: {
     marginTop: 12,
-    color: '#10b981',
+    color: '#1B4332',
     fontSize: 14,
     fontWeight: '500',
   },
+
   infoSection: {
-    backgroundColor: '#dbeafe',
-    borderRadius: 12,
+    backgroundColor: '#EAD7C3',
+    borderRadius: 16,
     padding: 16,
     marginBottom: 40,
-    borderLeftWidth: 4,
-    borderLeftColor: '#3b82f6',
+    borderLeftWidth: 5,
+    borderLeftColor: '#1B4332',
   },
+
   infoTitle: {
     fontSize: 16,
     fontWeight: '600',
-    color: '#1e40af',
+    color: '#1B4332',
     marginBottom: 8,
   },
+
   infoText: {
     fontSize: 14,
-    color: '#1e3a8a',
+    color: '#2C2C2C',
     lineHeight: 22,
   },
+
   imageItem: {
     flexDirection: 'row',
     alignItems: 'center',
     marginBottom: 12,
     paddingBottom: 12,
     borderBottomWidth: 1,
-    borderBottomColor: '#e5e7eb',
+    borderBottomColor: '#DCC3A5',
   },
+
   thumbnail: {
     width: 80,
     height: 80,
-    borderRadius: 8,
+    borderRadius: 12,
     marginRight: 12,
-    backgroundColor: '#f3f4f6',
+    backgroundColor: '#F5E6D3',
   },
+
   imageInfo: {
     flex: 1,
   },
+
   imageText: {
     fontSize: 14,
     fontWeight: '500',
-    color: '#1f2937',
+    color: '#2C2C2C',
     marginBottom: 6,
   },
+
   removeButton: {
     paddingVertical: 6,
     paddingHorizontal: 12,
-    borderRadius: 6,
-    backgroundColor: '#fee2e2',
+    borderRadius: 8,
+    backgroundColor: '#FFB4B4',
   },
+
   removeButtonText: {
-    color: '#dc2626',
+    color: '#1B4332',
     fontSize: 12,
     fontWeight: '600',
   },
+
   textInput: {
     borderWidth: 1,
-    borderColor: '#d1d5db',
-    borderRadius: 8,
-    paddingHorizontal: 12,
-    paddingVertical: 10,
+    borderColor: '#DCC3A5',
+    borderRadius: 12,
+    paddingHorizontal: 14,
+    paddingVertical: 12,
     marginBottom: 12,
     fontSize: 16,
-    color: '#1f2937',
-    backgroundColor: '#fff',
+    color: '#1B4332',
+    backgroundColor: '#fbf2e7',
   },
 });

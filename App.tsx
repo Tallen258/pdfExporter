@@ -1,3 +1,4 @@
+import "./global.css";
 import { StatusBar } from 'expo-status-bar';
 import { View, ScrollView } from 'react-native';
 import { useState } from 'react';
