@@ -7,7 +7,7 @@ export const usePDFGenerator = () => {
   const [loading, setLoading] = useState(false);
   const [pdfUri, setPdfUri] = useState<string | null>(null);
 
-  const generatePDF = async (selectedImages: string[]) => {
+  const generatePDF = async (selectedImages: string[], fileName?: string) => {
     try {
       if (selectedImages.length === 0) {
         Alert.alert(STRINGS.ALERT_INFO_SELECT, STRINGS.ALERT_INFO_SELECT_MSG);
@@ -15,7 +15,7 @@ export const usePDFGenerator = () => {
       }
 
       setLoading(true);
-      const uri = await generatePDFFromImages(selectedImages);
+      const uri = await generatePDFFromImages(selectedImages, fileName);
       setPdfUri(uri);
       Alert.alert(
         STRINGS.ALERT_SUCCESS_PDF,

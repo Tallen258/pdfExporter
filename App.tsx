@@ -9,7 +9,6 @@ import {
   GeneratePDFSection,
   SharePDFSection,
   GoogleDriveSection,
-  InfoSection,
 } from './components';
 import { usePDFGenerator } from './hooks';
 
@@ -26,8 +25,8 @@ export default function App() {
     setSelectedImages(updated);
   };
 
-  const handleGeneratePDF = () => {
-    generatePDF(selectedImages);
+  const handleGeneratePDF = (fileName?: string) => {
+    generatePDF(selectedImages, fileName);
   };
 
   return (
@@ -61,8 +60,6 @@ export default function App() {
           loading={loading}
           onLoadingChange={setLoading}
         />
-
-        <InfoSection />
       </View>
     </ScrollView>
   );
