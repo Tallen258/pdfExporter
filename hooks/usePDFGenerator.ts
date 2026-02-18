@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { Alert } from 'react-native';
 import { generatePDFFromImages } from '../utils';
 import { STRINGS } from '../constants';
 
@@ -10,19 +9,14 @@ export const usePDFGenerator = () => {
   const generatePDF = async (selectedImages: string[], fileName?: string) => {
     try {
       if (selectedImages.length === 0) {
-        Alert.alert(STRINGS.ALERT_INFO_SELECT, STRINGS.ALERT_INFO_SELECT_MSG);
         return;
       }
 
       setLoading(true);
       const uri = await generatePDFFromImages(selectedImages, fileName);
       setPdfUri(uri);
-      Alert.alert(
-        STRINGS.ALERT_SUCCESS_PDF,
-        `${STRINGS.IMAGES_GENERATED} ${selectedImages.length} image(s)!`
-      );
     } catch (error) {
-      Alert.alert(STRINGS.ALERT_ERROR_IMAGES, `Failed to generate PDF: ${error}`);
+      console.error('Failed to generate PDF:', error);
     } finally {
       setLoading(false);
     }

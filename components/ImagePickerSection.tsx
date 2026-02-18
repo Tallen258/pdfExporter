@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, Alert } from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
 import * as ImagePicker from 'expo-image-picker';
 import { styles } from '../styles/App.styles';
 import { STRINGS } from '../constants';
@@ -17,7 +17,6 @@ export const ImagePickerSection: React.FC<ImagePickerSectionProps> = ({
     try {
       const { granted } = await ImagePicker.requestMediaLibraryPermissionsAsync();
       if (!granted) {
-        Alert.alert(STRINGS.ALERT_PERMISSION_TITLE, STRINGS.ALERT_PERMISSION_MSG);
         return;
       }
 
@@ -29,10 +28,9 @@ export const ImagePickerSection: React.FC<ImagePickerSectionProps> = ({
       if (!result.canceled) {
         const imageUris = result.assets.map((asset) => asset.uri);
         onImagesSelected(imageUris);
-        Alert.alert(STRINGS.ALERT_SUCCESS_IMAGES, `${imageUris.length} ${STRINGS.IMAGES_SELECTED}`);
       }
     } catch (error) {
-      Alert.alert(STRINGS.ALERT_ERROR_IMAGES, `Failed to pick images: ${error}`);
+      console.error('Failed to pick images:', error);
     }
   };
 

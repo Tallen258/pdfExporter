@@ -148,7 +148,7 @@ export const styles = StyleSheet.create({
     paddingVertical: 6,
     paddingHorizontal: 12,
     borderRadius: 8,
-    backgroundColor: '#FFB4B4',
+    backgroundColor: '#fad0d0',
   },
 
   removeButtonText: {

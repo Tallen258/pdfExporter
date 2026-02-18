@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, ActivityIndicator, Alert } from 'react-native';
+import { View, Text, TouchableOpacity, ActivityIndicator } from 'react-native';
 import * as Sharing from 'expo-sharing';
 import * as WebBrowser from 'expo-web-browser';
 import { styles } from '../styles/App.styles';
@@ -19,7 +19,6 @@ export const GoogleDriveSection: React.FC<GoogleDriveSectionProps> = ({
   const openInDrive = async () => {
     try {
       if (!pdfUri) {
-        Alert.alert(STRINGS.ALERT_INFO_GENERATE, STRINGS.ALERT_INFO_GENERATE_MSG);
         return;
       }
 
@@ -34,7 +33,7 @@ export const GoogleDriveSection: React.FC<GoogleDriveSectionProps> = ({
         WebBrowser.openBrowserAsync('https://drive.google.com');
       }, 500);
     } catch (error) {
-      Alert.alert(`Failed: ${error}`);
+      console.error('Failed:', error);
     } finally {
       onLoadingChange(false);
     }
